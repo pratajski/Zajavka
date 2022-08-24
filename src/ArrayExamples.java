@@ -1,10 +1,14 @@
 import java.util.Arrays;
-//TODO najmniejszy, element, średnia, mediana, sortowanie
+
 public class ArrayExamples {
     public static void main(String[] args) {
         ArrayExamples arrayExamples = new ArrayExamples();
-        arrayExamples.arraysExample1();
-        arrayExamples.arraysExample2();
+//        arrayExamples.arraysExample1();
+//        arrayExamples.arraysExample2();
+//        arrayExamples.maxElement();
+//        arrayExamples.avgElement();
+//        arrayExamples.sortedArray();
+        arrayExamples.median();
     }
 
     private void arraysExample1() {
@@ -36,14 +40,40 @@ public class ArrayExamples {
             total += element;
         }
         System.out.println("Total: " + total);
+    }
 
-        //max
-        double maximum = array[0];
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] > maximum) {
-                maximum = array[i];
+    //max
+    private void maxElement() {
+        int[] array = new int[]{8, 4, 18, 25, 45, 74, 2, 68};
+        int maximum = 0;
+        for (int j : array) {
+            if (j > maximum) {
+                maximum = j;
             }
         }
         System.out.println("Maximum = " + maximum);
     }
+
+    private void avgElement() {
+        int[] array = new int[]{2, 5, 6, 7, 4, 2, 1, 8, 3, 9};
+        int sum = 0;
+        for (int k : array) {
+            sum += k;
+        }
+        System.out.println("Avg = " + ((double) (sum) / array.length));
+    }
+
+    private void sortedArray() {
+        int[] array = new int[]{1, 3, 4, 6, 7, 9, 8, 5, 2};
+        int[] newArray = Arrays.stream(array).sorted().toArray();
+        System.out.println(Arrays.toString(newArray));
+    }
+
+    private void median(){
+        int[] array = new int[]{1, 3, 4, 6, 7, 9, 8, 5, 2};
+        int[] newArray = Arrays.stream(array).sorted().toArray();
+        System.out.println(newArray[newArray.length/2]);
+
+    }
+
 }
