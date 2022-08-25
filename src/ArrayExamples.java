@@ -13,7 +13,7 @@ public class ArrayExamples {
 //        arrayExamples.factorial(6);
 //        arrayExamples.palindrome("Kobyła ma mały bok");
 //        arrayExamples.palindrome("Kajak  ");
-        arrayExamples.tree(13, '@');
+        arrayExamples.tree(8, '@');
     }
 
     private void arraysExample1() {
@@ -113,7 +113,7 @@ public class ArrayExamples {
         int floor = number / 2;
         for (int i = floor; i > 0; i--) {
             for (int j = 0; j <= number; j++) {
-                if ((j < (floor)) || (j > (number - (floor)))) {
+                if ((j < floor) || (j > (number - floor))) {
                     System.out.print(" ");
                 } else {
                     System.out.print(leaf);
