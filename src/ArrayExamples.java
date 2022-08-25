@@ -8,7 +8,12 @@ public class ArrayExamples {
 //        arrayExamples.maxElement();
 //        arrayExamples.avgElement();
 //        arrayExamples.sortedArray();
-        arrayExamples.median();
+//        arrayExamples.median();
+//        arrayExamples.factorial(2);
+//        arrayExamples.factorial(6);
+//        arrayExamples.palindrome("Kobyła ma mały bok");
+//        arrayExamples.palindrome("Kajak  ");
+        arrayExamples.tree(13, '@');
     }
 
     private void arraysExample1() {
@@ -69,11 +74,54 @@ public class ArrayExamples {
         System.out.println(Arrays.toString(newArray));
     }
 
-    private void median(){
+    private void median() {
         int[] array = new int[]{1, 3, 4, 6, 7, 9, 8, 5, 2};
         int[] newArray = Arrays.stream(array).sorted().toArray();
-        System.out.println(newArray[newArray.length/2]);
+        System.out.println(newArray[newArray.length / 2]);
 
+    }
+
+    private void factorial(int liczba) {
+        int result = 1;
+        for (int i = 1; i <= liczba; i++) {
+            result *= i;
+        }
+        System.out.println("silnia = " + result);
+    }
+
+    private void palindrome(String text) {
+        String fraze = text.toLowerCase().trim().replace(" ", "");
+        String result = "";
+        for (int i = (fraze.length() - 1); i >= 0; i--) {
+            char letter = fraze.charAt(i);
+//            if (fraze.charAt(i) == ' ') {
+//                continue;
+//            }
+            result += fraze.charAt(i);
+        }
+//        System.out.println(result);
+        if (result.toLowerCase().equals(fraze)) {
+            System.out.println("ciąg jest palindromem");
+        } else {
+            System.out.println("ciąg NIE jest palindromem");
+        }
+    }
+
+    private void tree(int quantity, char mark) {
+        int number = quantity + 1;
+        char leaf = mark;
+        int floor = number / 2;
+        for (int i = floor; i > 0; i--) {
+            for (int j = 0; j <= number; j++) {
+                if ((j < (floor)) || (j > (number - (floor)))) {
+                    System.out.print(" ");
+                } else {
+                    System.out.print(leaf);
+                }
+            }
+            System.out.println("");
+            floor -= 1;
+        }
     }
 
 }
