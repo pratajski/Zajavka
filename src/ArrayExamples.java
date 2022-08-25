@@ -3,22 +3,21 @@ import java.util.Arrays;
 public class ArrayExamples {
     public static void main(String[] args) {
         ArrayExamples arrayExamples = new ArrayExamples();
-//        arrayExamples.arraysExample1();
-//        arrayExamples.arraysExample2();
-//        arrayExamples.maxElement();
-//        arrayExamples.avgElement();
-//        arrayExamples.sortedArray();
-//        arrayExamples.median();
-//        arrayExamples.factorial(2);
-//        arrayExamples.factorial(6);
-//        arrayExamples.palindrome("Kobyła ma mały bok");
-//        arrayExamples.palindrome("Kajak  ");
+        arrayExamples.arraysExample1();
+        arrayExamples.arraysExample2();
+        arrayExamples.maxElement();
+        arrayExamples.avgElement();
+        arrayExamples.sortedArray();
+        arrayExamples.median();
+        arrayExamples.factorial(2);
+        arrayExamples.factorial(6);
+        arrayExamples.palindrome("Kobyła ma mały bok");
+        arrayExamples.palindrome("Kajak  ");
         arrayExamples.tree(8, '@');
     }
 
     private void arraysExample1() {
         String[] array = new String[10];
-
         int i = 0;
         while (i < 5) {
             array[i] = "Hello new index: " + i;
@@ -32,7 +31,6 @@ public class ArrayExamples {
             completeContent = completeContent + array[k] + ";";
             System.out.println("Print => " + array[k]);
         }
-
         System.out.println(completeContent);
     }
 
@@ -109,14 +107,13 @@ public class ArrayExamples {
 
     private void tree(int quantity, char mark) {
         int number = quantity + 1;
-        char leaf = mark;
         int floor = number / 2;
         for (int i = floor; i > 0; i--) {
             for (int j = 0; j <= number; j++) {
                 if ((j < floor) || (j > (number - floor))) {
                     System.out.print(" ");
                 } else {
-                    System.out.print(leaf);
+                    System.out.print(mark);
                 }
             }
             System.out.println("");

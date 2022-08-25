@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42cb4a92-4095-459c-aa2a-bec5ebb1fa7b" name="Changes" comment="factorial, palindrom, tree">
+    <list default="true" id="42cb4a92-4095-459c-aa2a-bec5ebb1fa7b" name="Changes" comment="tree brackets">
       <change beforePath="$PROJECT_DIR$/src/ArrayExamples.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArrayExamples.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661452684124</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="tree brackets">
+      <created>1661452873838</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661452873838</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,7 +118,8 @@
     <MESSAGE value="Conditionals" />
     <MESSAGE value="Array Examples cd" />
     <MESSAGE value="factorial, palindrom, tree" />
-    <option name="LAST_COMMIT_MESSAGE" value="factorial, palindrom, tree" />
+    <MESSAGE value="tree brackets" />
+    <option name="LAST_COMMIT_MESSAGE" value="tree brackets" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Zajavka$Main.ic" NAME="Main Coverage Results" MODIFIED="1661088499388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
