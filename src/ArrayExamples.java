@@ -15,7 +15,10 @@ public class ArrayExamples {
 //        arrayExamples.palindrome("Kajak  ");
 //        arrayExamples.tree(8, '@');
 //        arrayExamples.markers(50);
-        arrayExamples.primeNumbers();
+//        arrayExamples.primeNumbers(80);
+//        arrayExamples.primeNumbers(10);
+//        arrayExamples.marks(1000);
+        arrayExamples.fibo(19);
     }
 
     private void arraysExample1() {
@@ -122,6 +125,7 @@ public class ArrayExamples {
             floor -= 1;
         }
     }
+
     private void markers(int quantity) {
         String red = "Red";
         String green = "Green";
@@ -130,27 +134,23 @@ public class ArrayExamples {
         String yellow = "Yellow";
         String brown = "Brown";
 
-        for (int i=0; i<quantity;i++) {
-            if (i%6 == 5) {
+        for (int i = 0; i < quantity; i++) {
+            if (i % 6 == 5) {
                 System.out.println(brown);
-            }
-           else if (i%6 == 0) {
+            } else if (i % 6 == 0) {
                 System.out.println(red);
-            }
-            else if (i%6 == 1) {
+            } else if (i % 6 == 1) {
                 System.out.println(green);
-            }
-            else if (i%6 == 2) {
+            } else if (i % 6 == 2) {
                 System.out.println(blue);
-            }
-            else if (i%6 == 3) {
+            } else if (i % 6 == 3) {
                 System.out.println(black);
-            }
-            else if (i%6 == 4) {
+            } else if (i % 6 == 4) {
                 System.out.println(yellow);
             }
         }
     }
+
     private int primeNumbers(int number) {
         if (number < 2) {
             System.out.println("Liczba musi być >= 2");
@@ -158,12 +158,12 @@ public class ArrayExamples {
         } else {
             System.out.println("2");
             for (int i = 3; i <= number; i++) {
-                if (i%2==0) {
+                if (i % 2 == 0) {
                     continue;
                 }
                 boolean prime = true;
-                for (int j=2;j<i;j++) {
-                    if (i%j == 0) {
+                for (int j = 2; j < i; j++) {
+                    if (i % j == 0) {
                         prime = false;
                         break;
                     }
@@ -173,6 +173,38 @@ public class ArrayExamples {
                 }
             }
             return -1;
+        }
+    }
+
+    private void marks(int quantity) {
+        int x = 39;
+        int y = 11;
+        for (int i = 0; i < quantity; i++) {
+            if ((i % 2 != 0) && (i != (quantity - 1))) {
+                System.out.print(y + ", ");
+                y -= 3;
+            } else if ((i % 2 == 0) && (i != (quantity - 1))) {
+                System.out.print(x + ", ");
+                x += 2;
+            } else if ((i % 2 != 0) && (i == (quantity - 1))) {
+                System.out.print(y);
+            } else if ((i % 2 == 0) && (i == (quantity - 1))) {
+                System.out.print(x);
+            }
+        }
+    }
+
+    private void fibo(int quantity) {
+        int x = 0;
+        int y = 1;
+        int result = 0;
+        System.out.println("0");
+        System.out.println("1");
+        for (int i = 1; i < quantity; i++) {
+            result = x + y;
+            System.out.println(result);
+            x = y;
+            y = result;
         }
     }
 }
