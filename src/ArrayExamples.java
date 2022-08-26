@@ -3,17 +3,19 @@ import java.util.Arrays;
 public class ArrayExamples {
     public static void main(String[] args) {
         ArrayExamples arrayExamples = new ArrayExamples();
-        arrayExamples.arraysExample1();
-        arrayExamples.arraysExample2();
-        arrayExamples.maxElement();
-        arrayExamples.avgElement();
-        arrayExamples.sortedArray();
-        arrayExamples.median();
-        arrayExamples.factorial(2);
-        arrayExamples.factorial(6);
-        arrayExamples.palindrome("Kobyła ma mały bok");
-        arrayExamples.palindrome("Kajak  ");
-        arrayExamples.tree(8, '@');
+//        arrayExamples.arraysExample1();
+//        arrayExamples.arraysExample2();
+//        arrayExamples.maxElement();
+//        arrayExamples.avgElement();
+//        arrayExamples.sortedArray();
+//        arrayExamples.median();
+//        arrayExamples.factorial(2);
+//        arrayExamples.factorial(6);
+//        arrayExamples.palindrome("Kobyła ma mały bok");
+//        arrayExamples.palindrome("Kajak  ");
+//        arrayExamples.tree(8, '@');
+//        arrayExamples.markers(50);
+        arrayExamples.primeNumbers();
     }
 
     private void arraysExample1() {
@@ -120,5 +122,57 @@ public class ArrayExamples {
             floor -= 1;
         }
     }
+    private void markers(int quantity) {
+        String red = "Red";
+        String green = "Green";
+        String blue = "Blue";
+        String black = "Black";
+        String yellow = "Yellow";
+        String brown = "Brown";
 
+        for (int i=0; i<quantity;i++) {
+            if (i%6 == 5) {
+                System.out.println(brown);
+            }
+           else if (i%6 == 0) {
+                System.out.println(red);
+            }
+            else if (i%6 == 1) {
+                System.out.println(green);
+            }
+            else if (i%6 == 2) {
+                System.out.println(blue);
+            }
+            else if (i%6 == 3) {
+                System.out.println(black);
+            }
+            else if (i%6 == 4) {
+                System.out.println(yellow);
+            }
+        }
+    }
+    private int primeNumbers(int number) {
+        if (number < 2) {
+            System.out.println("Liczba musi być >= 2");
+            return 0;
+        } else {
+            System.out.println("2");
+            for (int i = 3; i <= number; i++) {
+                if (i%2==0) {
+                    continue;
+                }
+                boolean prime = true;
+                for (int j=2;j<i;j++) {
+                    if (i%j == 0) {
+                        prime = false;
+                        break;
+                    }
+                }
+                if (prime) { //równoznaczne z (prime == true)
+                    System.out.println(i);
+                }
+            }
+            return -1;
+        }
+    }
 }
